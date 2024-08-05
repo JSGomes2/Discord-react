@@ -7,17 +7,19 @@ import { useState } from 'react'
 
 export default function E01() {
 
-        const[ValorPedido, setValorPedido] = useState ()
-        const[ValorCupom, setValorCupom] = useState ()
+       
+        const[Valorpqn, setValorpqn] = useState ()
+        const[Valormed, setValormed] = useState ()
+        const[Valorgran, setValorgran] = useState ()
         const[VTotal, setVTotal] = useState()
 
     function total (){
-            let x = (ValorCupom /100)*ValorPedido
-            setVTotal(x)
+          let x = (Valorpqn*13.50) + (Valormed*15.00) + (Valorgran*17.50)
+          setVTotal(x)
     }
 
     return (
-        <div className='pagina-e01'>
+        <div className='pagina-e03'>
             <div className='cabecalho'>
                 <div className='titulo'>
                     <img src='/logo.png' alt='logo'/>
@@ -34,23 +36,30 @@ export default function E01() {
                 <div className='titulo'>
                     <div className='texto'>
                         <Link to='/'><img src='/voltar.png' alt='voltar' /></Link>
-                        <h2>Exercício 01 - Cupom de desconto</h2>
+                        <h2>Exercício 03 - Valor total por quantidade</h2>
                     </div>
                     <div className='faixa'/>
                 </div>
                 <div className='descricao'>
-                    <p>Implementar um programa em <b>Javascript</b> para calcular o valor final de uma compra a partir do valor da compra e do cupom de desconto. <b>O cupom diz quantos reais</b> terá de desconto.</p>
+                    <p>Implementar um programa em Javascript para calcular o total de uma venda de açaí a partir das quantidades compradas para cada tamanho: pequeno, médio e grande, <br></br> sabendo que o valor do açaí é R$ 13,50; R$ 15,00 e R$ 17,50 respectivamente</p>
                 </div>
-                <div className='formulario'>
+                <div className='form'>
                     <div className='campos'>
+                       <div className='deitados'>
                         <div className='campo'>
-                            <label>Informe o valor do pedido</label>
-                            <input placeholder='0' value={ValorPedido} onChange={e=> setValorPedido (e.target.value)} />
+                            <label>Qtd pequeno </label>
+                            <input placeholder='0' value={Valorpqn} onChange={e=> setValorpqn (e.target.value)} />
                         </div>
                         <div className='campo'>
-                            <label>Informe o valor do cupom</label>
-                            <input placeholder='0' value={ValorCupom} onChange={e=> setValorCupom (e.target.value)} />
+                            <label>Qtd médio</label>
+                            <input placeholder='0' value={Valormed} onChange={e=> setValormed (e.target.value)} />
                         </div>
+                        <div className='campo'>
+                            <label>Qtd Grande </label>
+                            <input placeholder='0' value={Valorgran} onChange={e=> setValorgran (e.target.value)} />
+                        </div>
+                        </div>
+
                         <a href='#' className='executar' onClick={total} >Executar</a>
                     </div>
                     <h3 className='resultado' >Resultado: O total é R$ {VTotal} </h3>

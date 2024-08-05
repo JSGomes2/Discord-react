@@ -26,8 +26,33 @@ export default function Inicio() {
                             <div className='retangulo laranja'/>
                             <h3 className='titulo'>Cupom de desconto</h3>
                             <h4 className='subtitulo'>Exercício 1</h4>
+
                         </div>
-                    </Link>
+                        </Link>
+                        <Link to='/e02' className='link'>
+                        <div className='card'>
+                            <div className='retangulo verde'/>
+                            <h3 className='titulo'>Converter Kg/gramas</h3>
+                            <h4 className='subtitulo'>Exercício 2</h4>
+                        </div>
+                        </Link>
+
+                        <Link to='/e03' className='link'>
+                        <div className='card'>
+                            <div className='retangulo azul'/>
+                            <h3 className='titulo'>Valor por quantidade</h3>
+                            <h4 className='subtitulo'>Exercício 2</h4>
+                        </div>
+                        </Link>
+                        <Link to='/e04' className='link'>
+                        <div className='card'>
+                            <div className='retangulo azul'/>
+                            <h3 className='titulo'>Horas/Livro</h3>
+                            <h4 className='subtitulo'>Exercício 2</h4>
+                        </div>
+                        </Link>
+
+                  
                 </div>
             </div>
         </div>
