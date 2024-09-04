@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import './index.scss'
 import { useState } from 'react'
+import { Cabecalho } from '../../componentes/cabecalho'
 
 
 
@@ -20,18 +21,7 @@ export default function E01() {
 
     return (
         <div className='pagina-e03'>
-            <div className='cabecalho'>
-                <div className='titulo'>
-                    <img src='/logo.png' alt='logo'/>
-                    <h1>
-                        React FreiS
-                    </h1>
-                </div>
-                <div className='links'>
-                    <Link to='/' className='link'>Inicio</Link>
-                    <Link to='/sobre' className='link'>Sobre</Link>
-                </div>
-            </div>
+          <Cabecalho/>
             <div className='exercicio'>
                 <div className='titulo'>
                     <div className='texto'>
